@@ -94,8 +94,8 @@
     header.classList.toggle("scrolled", window.scrollY > 24);
     if (rhythm && rhythmTrack && window.innerWidth > 620) {
       const bounds = rhythmTrack.getBoundingClientRect();
-      const startLine = window.innerHeight * 0.56;
-      const travelDistance = bounds.height + window.innerHeight * 0.52;
+      const startLine = window.innerHeight * 0.76;
+      const travelDistance = bounds.height + window.innerHeight * 0.45;
       const progress = Math.min(1, Math.max(0, (startLine - bounds.top) / travelDistance));
       rhythm.style.setProperty("--rhythm-progress", progress.toFixed(3));
     }
