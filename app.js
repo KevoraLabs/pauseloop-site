@@ -7,6 +7,7 @@
   const shotTabs = [...document.querySelectorAll("[data-shot]")];
   const header = document.querySelector("[data-header]");
   const rhythm = document.querySelector("[data-rhythm]");
+  const rhythmTrack = document.querySelector(".rhythm-track");
   const supportedLocales = Object.keys(translations);
   let activeShot = "focus";
   let activeLocale = "en-US";
@@ -91,9 +92,11 @@
 
   function updateScrollEffects() {
     header.classList.toggle("scrolled", window.scrollY > 24);
-    if (rhythm && window.innerWidth > 620) {
-      const bounds = rhythm.getBoundingClientRect();
-      const progress = Math.min(1, Math.max(0, (window.innerHeight * 0.72 - bounds.top) / (bounds.height * 0.7)));
+    if (rhythm && rhythmTrack && window.innerWidth > 620) {
+      const bounds = rhythmTrack.getBoundingClientRect();
+      const startLine = window.innerHeight * 0.56;
+      const travelDistance = bounds.height + window.innerHeight * 0.52;
+      const progress = Math.min(1, Math.max(0, (startLine - bounds.top) / travelDistance));
       rhythm.style.setProperty("--rhythm-progress", progress.toFixed(3));
     }
   }
