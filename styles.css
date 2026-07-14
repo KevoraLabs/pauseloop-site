@@ -111,12 +111,12 @@ button, select { font: inherit; }
   position: relative;
   width: min(1060px, 92%);
   height: auto;
-  aspect-ratio: 1600 / 1489;
+  aspect-ratio: 1944 / 1808;
   margin: 0 auto;
   filter: drop-shadow(0 46px 50px rgba(12, 42, 37, .22));
 }
 .product-halo {
-  position: absolute; width: 82%; aspect-ratio: 1600 / 1489; left: 9%; top: 7%; border-radius: 48%;
+  position: absolute; width: 82%; aspect-ratio: 1944 / 1808; left: 9%; top: 7%; border-radius: 48%;
   background: radial-gradient(ellipse, rgba(47,128,110,.20), transparent 66%); filter: blur(34px);
 }
 
@@ -159,7 +159,7 @@ h2 { margin: 0; font-size: clamp(3.1rem, 6vw, 6rem); }
   z-index: 1;
   width: 100%;
   height: auto;
-  aspect-ratio: 1600 / 1489;
+  aspect-ratio: 1944 / 1808;
   filter: drop-shadow(0 34px 38px rgba(12,42,37,.18));
   transition: opacity .18s ease, transform .25s ease;
 }
